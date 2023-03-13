@@ -1,6 +1,6 @@
 import React from 'react';
 
-function MenuLinks({ isOpen }) {
+function HeaderLinks({ isOpen }) {
     return (
         <div className={isOpen ? "menu__container open" : "menu__container"}>
             <div className="menu__item">Food</div>
@@ -12,4 +12,4 @@ function MenuLinks({ isOpen }) {
     );
 }
 
-export default MenuLinks;
+export default HeaderLinks;

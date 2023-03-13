@@ -1,5 +1,5 @@
 // import logo from './logo.svg';
-import Menu from './components/Menu/Menu';
+import Header from './components/Header/Header';
 import Contact from './components/Contact/Contact'
 import Events from './components/Events/Events'
 import FoodMenu from './components/FoodMenu/FoodMenu'
@@ -9,13 +9,10 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Menu />
-      <header className="App-header">
-        Hello
-      </header>
-      <Contact />
-      <Events />
+      <Header />
       <FoodMenu />
+      <Events />
+      <Contact />
     </div>
   );
 }
