@@ -1,14 +1,40 @@
 import React from 'react';
+import { Link } from 'react-scroll';
 
-function HeaderLinks({ isOpen }) {
+function HeaderLinks({ isOpen, toggleMenu }) {
+    const links = [
+        { to: 'food-menu', label: 'Menu' },
+        { to: 'about', label: 'About' },
+        { to: 'testimonials', label: 'Testimonials' },
+        { to: 'events', label: 'Events' },
+        { to: 'contact', label: 'Contact' },
+    ];
+
+    const options = {
+        spy: true,
+        smooth: true,
+        duration: 500,
+        offset: -100, // add space above the component
+    };
+
+    const handleClick = () => {
+        toggleMenu();
+    };
+
     return (
-        <div className={isOpen ? "menu__container open" : "menu__container"}>
-            <div className="menu__item">Food</div>
-            <div className="menu__item">About</div>
-            <div className="menu__item">Community</div>
-            <div className="menu__item">Contact</div>
-            <div className="menu__item">Events</div>
-        </div>
+        <header className={isOpen ? 'menu__container open' : 'menu__container'}>
+            {links.map((link) => (
+                <Link
+                    key={link.to}
+                    to={link.to}
+                    {...options}
+                    className="menu__item"
+                    onClick={handleClick}
+                >
+                    {link.label}
+                </Link>
+            ))}
+        </header>
     );
 }
 
