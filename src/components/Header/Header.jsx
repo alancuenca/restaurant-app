@@ -10,14 +10,14 @@ function Header() {
     };
 
     return (
-        <header className="menu">
-            <div className="burger" onClick={toggleMenu}>
-                <div className={isOpen ? "line--1 open" : "line--1"} />
-                <div className={isOpen ? "line--2 open" : "line--2"} />
-                <div className={isOpen ? "line--3 open" : "line--3"} />
-            </div>
-            <HeaderLinks isOpen={isOpen} />
-        </header>
+        <div className="menu">
+                <div className="burger" onClick={toggleMenu}>
+                    <div className={isOpen ? "line--1 open" : "line--1"} />
+                    <div className={isOpen ? "line--2 open" : "line--2"} />
+                    <div className={isOpen ? "line--3 open" : "line--3"} />
+                </div>
+            <HeaderLinks isOpen={isOpen} toggleMenu={toggleMenu} />
+        </div>
     );
 }
 

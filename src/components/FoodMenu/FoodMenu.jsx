@@ -2,7 +2,7 @@ import "./FoodMenu.css"
 
 function FoodMenu() {
   return (
-    <div id="FoodMenu">
+    <div id="food-menu">
       <div className="menu-container">
         <div className="menu-category breakfast">
           <h4>Breakfast</h4>

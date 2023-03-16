@@ -1,0 +1,71 @@
+.hero {
+    /* position: relative; */
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+.hero__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    transition: opacity 0.5s ease;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero__slogan {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px #F05454;
+    z-index: 1;
+    transition: opacity 0.5s ease;
+    font-family: 'Lobster', cursive;
+}
+
+.hero__slogan h1 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    filter: drop-shadow(3px 3px black);
+}
+
+.hero__slogan p {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    filter: drop-shadow(3px 3px black);
+}
+
+.hero__button {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    border: 2px solid #fff;
+    color: #fff;
+    background-color: transparent;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    cursor: pointer;
+}
+
+.hero__button:hover {
+    background-color: #fff;
+    color: #222831;
+}
+
+
+.hero__slogan.fade-in {
+    opacity: 1;
+}
+
+.hero__slogan{
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
