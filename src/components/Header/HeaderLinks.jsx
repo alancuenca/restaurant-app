@@ -14,7 +14,7 @@ function HeaderLinks({ isOpen, toggleMenu }) {
         spy: true,
         smooth: true,
         duration: 500,
-        offset: -100, // add space above the component
+        offset: -100,
     };
 
     const handleClick = () => {

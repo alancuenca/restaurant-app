@@ -3,6 +3,12 @@ import "./Hero.css";
 import backgroundImage from "../../assets/images/food_table.avif";
 
 function Hero() {
+
+    const handleButtonClick = () => {
+        const contactSection = document.getElementById("contact");
+        contactSection.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+    };
+
     useEffect(() => {
         const options = {
             rootMargin: "-50% 0px", // fade in when image is 50% visible
@@ -40,7 +46,7 @@ function Hero() {
             <div className={`hero__slogan`}>
                 <h1>Welcome to Bites</h1>
                 <p>Let us serve you</p>
-                <button className="hero__button">Book A Table</button>
+                <button className="hero__button" onClick={handleButtonClick}>Book A Table</button>
             </div>
         </div>
     );

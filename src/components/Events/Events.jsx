@@ -1,6 +1,5 @@
 import React from 'react';
 import { format, addDays, isAfter } from 'date-fns';
-import { ImCalendar } from 'react-icons/im';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import './Events.css';
@@ -72,7 +71,6 @@ function Events() {
       </div>
 
       <div className="calendar">
-        <ImCalendar className="calendar-icon" />
         <Calendar
           tileContent={({ date }) => {
             const event = events.find((event) => event.date.toDateString() === date.toDateString());
