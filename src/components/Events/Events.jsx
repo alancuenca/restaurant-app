@@ -43,8 +43,18 @@ function Events() {
         <h2 className="events-header-h2">Upcoming Events</h2>
       </div>
 
-      <div className="events">
+      <div className="calendar">
+        <Calendar
+          tileContent={({ date }) => {
+            const event = events.find((event) => event.date.toDateString() === date.toDateString());
 
+            return event && <div className="event-indicator">{event.name}</div>;
+
+          }}
+        />
+      </div>
+
+      <div className="events">
         <div className="events-calendar">
           {upcomingEvents.length > 0 ? (
             <ul>
@@ -70,16 +80,6 @@ function Events() {
 
       </div>
 
-      <div className="calendar">
-        <Calendar
-          tileContent={({ date }) => {
-            const event = events.find((event) => event.date.toDateString() === date.toDateString());
-
-            return event && <div className="event-indicator">{event.name}</div>;
-
-          }}
-        />
-      </div>
     </div>
   );
 }
