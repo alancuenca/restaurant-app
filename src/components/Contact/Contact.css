@@ -1,0 +1,148 @@
+.contact-container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact-info>div {
+    flex-basis: calc(33.33% - 10px);
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.contact-info>div:nth-child(3) {
+    flex-basis: 100%;
+}
+
+.food-img>img {
+    width: 100%;
+}
+
+.contact-info>div:nth-child(1),
+.contact-info>div:nth-child(2) {
+    flex-basis: calc(50% - 10px);
+}
+
+/* .contact-address .icon_marker {
+    font-size: 2rem;
+    color: #F05454;
+}
+
+.contact-address .icon_phone {
+    font-size: 3rem;
+    color: #222831;
+} */
+
+@media only screen and (min-width: 768px) {
+    .contact-info>div:nth-child(1) {
+        flex-basis: calc(50% - 10px);
+    }
+
+    .contact-info>div:nth-child(2),
+    .contact-info>div:nth-child(3) {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .contact-info>div {
+        flex-basis: calc(33.33% - 10px);
+    }
+}
+
+/* .contact-address {
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+} */
+
+/* .contact-address>i {
+    margin-right: 10px;
+} */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form>h3 {
+    margin-top: 0;
+}
+
+.contact-form>form {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.contact-form>form>label {
+    flex-basis: 100%;
+}
+
+.contact-form>form>input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact-form>form>button {
+    background-color: #d52027;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-form>form>button:hover {
+    background-color: #fff;
+    color: #d52027;
+}
+
+.contact-map>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 767px) {
+
+    .contact-info>div:nth-child(1),
+    .contact-info>div:nth-child(2) {
+        flex-basis: 100%;
+    }
+
+    .contact-map {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50dvh;
+    }
+
+    .contact-map>img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+        .contact-info>div:nth-child(3) {
+            height: 500px;
+        }
+
+    .food-img>img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+}

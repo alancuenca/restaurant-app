@@ -2,7 +2,7 @@ import './About.css'
 
 function About() {
   console.log();
-  return (
+  return ( 
     <div id="about">
       <div className="about">
         <div className="head_chef"/>
